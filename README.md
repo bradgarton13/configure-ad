@@ -27,8 +27,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 - Create Two VM's within the same resource group and virtual network. One machine will be a Windows Server 2022 machine(DC1), and the other a Window's 10 machine(Client1).
 - Connect with DC1 via Remote Desktop and use Server Manager to install Active Directory.
-- Create a few organizational units inside of Active Directory. Alter Client1's DNS server to be the same as DC1's private IP and add Client1 to the domain.
-- Use powershell and generate 10000 random users apart of the domain and sign into Client1 with one of those users.
+- Create a few organizational units inside of Active Directory. Alter Client1's DNS server to be the same as DC1's private IP inside of the Azure Portal. Then, add Client1 to the domain.
+- Use a Powershell ISE script to generate 10000 random users apart of the domain and sign into Client1 with one of those users.
 
 
 
