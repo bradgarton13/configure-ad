@@ -59,10 +59,15 @@ I created two organizational units inside of Active Directory, one being _ADMINS
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![image](https://github.com/bradgarton13/configure-ad/assets/166873905/1871c5e4-afef-4d61-a455-6acb063e6960)
+
+![image](https://github.com/bradgarton13/configure-ad/assets/166873905/01add9a0-d0f2-4dc5-8ec7-fa0b6533f1d1)
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+I then signed into Client1 and went into the Window's settings and navigated to the remote desktop settings in the About tab. I made changed the settings so that any user under Domain Users in the domain can access Client1 remotely. Using a powershell script I created 1000 users inside of DC1 with the password "Password1". I picked a random user, "caf.jet", and logged into them on Client1 using Remote Desktop with the default given password "Password1". I verified I was on Client1 signed as caf.jet by using the hostname and whoami command in Command Prompt.
 </p>
 <br />
 
