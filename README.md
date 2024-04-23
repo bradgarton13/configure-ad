@@ -25,11 +25,12 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1 Create Two VM's within the same resource group and virtual network. One machine will be a Windows Server 2022 machine(DC1), and the other a Window's 10 machine(Client1).
-- Step 2 Connect with DC1 via Remote Desktop and use Server Manager to install Active Directory.
-- Step 3
-- Step 4
-- Step 5
+- Create Two VM's within the same resource group and virtual network. One machine will be a Windows Server 2022 machine(DC1), and the other a Window's 10 machine(Client1).
+- Connect with DC1 via Remote Desktop and use Server Manager to install Active Directory.
+- Create a few organizational units inside of Active Directory. Alter Client1's DNS server to be the same as DC1's private IP and add Client1 to the domain.
+- Use powershell and generate 10000 random users apart of the domain and sign into Client1 with one of those users.
+
+
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -61,23 +62,13 @@ I created two organizational units inside of Active Directory, one being _ADMINS
 <p>
 
 ![image](https://github.com/bradgarton13/configure-ad/assets/166873905/1871c5e4-afef-4d61-a455-6acb063e6960)
-
 ![image](https://github.com/bradgarton13/configure-ad/assets/166873905/01add9a0-d0f2-4dc5-8ec7-fa0b6533f1d1)
 
 
 </p>
 <p>
-I then signed into Client1 and went into the Window's settings and navigated to the remote desktop settings in the About tab. I made changed the settings so that any user under Domain Users in the domain can access Client1 remotely. Using a powershell script I created 1000 users inside of DC1 with the password "Password1". I picked a random user, "caf.jet", and logged into them on Client1 using Remote Desktop with the default given password "Password1". I verified I was on Client1 signed as caf.jet by using the hostname and whoami command in Command Prompt.
+I then signed into Client1 and went into the Window's settings and navigated to the remote desktop settings in the About tab. I made changed the settings so that any user under Domain Users in the domain can access Client1 remotely. Using a powershell script I created 1000 users inside of DC1 with the password "Password1". These users were automatically created inside the previously created organization unit "_EMPLOYEES" that we created earlier. I picked a random user, "caf.jet", and logged into them on Client1 using Remote Desktop with the default given password "Password1". I verified I was on Client1 signed as caf.jet by using the hostname and whoami command in Command Prompt.
 </p>
 <br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
 
 
