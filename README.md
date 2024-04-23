@@ -45,10 +45,16 @@ I have created the virtual machine DC1 on Microsoft Azure and connected/ logged 
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![image](https://github.com/bradgarton13/configure-ad/assets/166873905/2703dab5-9d27-4629-809b-ce919aa1add5)
+![image](https://github.com/bradgarton13/configure-ad/assets/166873905/1b19a068-8c1f-4de2-97ad-b4e86647a6bf)
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+I created two organizational units inside of Active Directory, one being _ADMINS and the other being _EMPLOYEES. I then created a user named jane doe and made her a member of the default group Domain Admins.
+  I then changed the DNS server for Client1 to the same address as DC1's private IP address in Azure. This will allow me to move forward with joining Client1 to DC1's domain. I then restarted Client1 and verified my IP address was the same as DC1's private IP (10.0.0.4).
+  After that I went into Windows Settings > About Tab > Advanced Settings > Computer Name > Change > and made Client1 a member of DC1's domain (adlabdomain.com).
 </p>
 <br />
 
