@@ -25,8 +25,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
+- Step 1 Create Two VM's within the same resource group and virtual network. One machine will be a Windows Server 2022 machine(DC1), and the other a Window's 10 machine(Client1).
+- Step 2 Connect with DC1 via Remote Desktop and use Server Manager to install Active Directory.
 - Step 3
 - Step 4
 - Step 5
@@ -34,10 +34,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![image](https://github.com/bradgarton13/configure-ad/assets/166873905/f65a67ba-0e8e-42a0-90ae-44e5de574fd2)
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+I have created the virtual machine DC1 on Microsoft Azure and connected/ logged in to with Remote Desktop. In the image above, I am seen using Server Manager to install Active Directory on the domain controller VM (DC1).  
 </p>
 <br />
 
