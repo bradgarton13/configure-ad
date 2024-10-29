@@ -37,7 +37,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 </p>
 <p>
-I have created the virtual machine DC1 on Microsoft Azure and connected/ logged in to with Remote Desktop. In the image above, I am seen using Server Manager to install Active Directory on the domain controller VM (DC1).  
+  
+  1. I have created the virtual machine DC1 on Microsoft Azure and connected/ logged in to with Remote Desktop. In the image above, I am seen using Server Manager to install Active Directory on the domain controller VM (DC1).
+  
+  
 </p>
 <br />
 
@@ -49,9 +52,12 @@ I have created the virtual machine DC1 on Microsoft Azure and connected/ logged 
 
 </p>
 <p>
-I created two organizational units inside of Active Directory, one being _ADMINS and the other being _EMPLOYEES. I then created a user named jane doe and made her a member of the default group Domain Admins.
-  I then changed the DNS server for Client1 to the same address as DC1's private IP address in Azure. This will allow me to move forward with joining Client1 to DC1's domain. I then restarted Client1 and verified my IP address was the same as DC1's private IP (10.0.0.4).
-  After that I went into Windows Settings > About Tab > Advanced Settings > Computer Name > Change > and made Client1 a member of DC1's domain (adlabdomain.com).
+
+  2. I created two organizational units inside of Active Directory, one being _ADMINS and the other being _EMPLOYEES. I then created a user named jane doe and made her a member of the default group Domain Admins.
+  3. I then changed the DNS server for Client1 to the same address as DC1's private IP address in Azure. This will allow me to move forward with joining Client1 to DC1's domain. 
+  4. I then restarted Client1 and verified my IP address was the same as DC1's private IP (10.0.0.4).
+  5. After that I went into Windows Settings > About Tab > Advanced Settings > Computer Name > Change > and made Client1 a member of DC1's domain (adlabdomain.com).
+  
 </p>
 <br />
 
@@ -63,7 +69,11 @@ I created two organizational units inside of Active Directory, one being _ADMINS
 
 </p>
 <p>
-I then signed into Client1 and went into the Window's settings and navigated to the remote desktop settings in the About tab. I made changed the settings so that any user under Domain Users in the domain can access Client1 remotely. Using a powershell script I created 1000 users inside of DC1 with the password "Password1". These users were automatically created inside the previously created organization unit "_EMPLOYEES" that we created earlier. I picked a random user, "caf.jet", and logged into them on Client1 using Remote Desktop with the default given password "Password1". I verified I was on Client1 signed as caf.jet by using the hostname and whoami command in Command Prompt.
+  
+6. I then signed into Client1 and went into the Window's settings and navigated to the remote desktop settings in the About tab. I made changed the settings so that any user under Domain Users in the domain can access Client1 remotely. 
+7. Using a powershell script I created 1000 users inside of DC1 with the password "Password1". These users were automatically created inside the previously created organization unit "_EMPLOYEES" that we created earlier. 
+8. I picked a random user, "caf.jet", and logged into them on Client1 using Remote Desktop with the default given password "Password1". I verified I was on Client1 signed as caf.jet by using the hostname and whoami command in Command Prompt.
+  
 </p>
 <br />
 
